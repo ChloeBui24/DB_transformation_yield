@@ -10,3 +10,5 @@ FROM
     RawData_yield,
     jsonb_array_elements(raw_json -> 'data') AS json_object
 ON CONFLICT (DATE) DO NOTHING;
+
+Delete from RawData_yield
